@@ -12,22 +12,38 @@
     <script src="//cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/estilos.css">
     <script type="module" src="./js/scripts.js"></script>
+    <script src="./js/menu.js"></script>
     <!-- ppQtZhQbmR4 id del video para implementar más tarde -->
 </head>
 
 <body class="bg-blue-950 text-gray-100">
     <header class="backdrop-blur-sm flex bg-gray-700 justify-between items-center fixed top-0 w-full z-50">
         <a href="./index.html">
-            <img src="./assets/logo.png" class="w-24" alt="Logo del Grupo IDT">
+            <img src="./assets/logo.png" class="w-16 md:w-24" alt="Logo del Grupo IDT">
         </a>
-        <nav class="flex gap-4 h-24 items-center">
-            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./index.html">Inicio</a>
-            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./blog.html">Blog</a>
-            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./contacto.html">Contacto</a>
+        <nav class="hidden md:flex gap-4 h-24 items-center">
+            <a class="text-lg md:text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./index.html">Inicio</a>
+            <a class="text-lg md:text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./blog.html">Blog</a>
+            <a class="text-lg md:text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./contacto.html">Contacto</a>
         </nav>
-        <div class="pr-3 h-24 flex">
-            <a class="text-2xl leading-[80px] h-24 p-2 hover:bg-slate-400 transition-all" href="#">Comprar</a>
+        <button id="menuBtn" class="md:hidden p-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="pr-3 h-24 hidden md:flex">
+            <a class="text-lg md:text-2xl leading-[80px] h-24 p-2 hover:bg-slate-400 transition-all" href="#">Comprar</a>
         </div>
+        <nav id="mobileMenu" class="hidden fixed top-24 left-0 w-full bg-gray-700 md:hidden">
+            <div class="flex flex-col">
+                <a class="text-xl p-4 hover:bg-slate-400 transition-all border-b border-gray-600" href="./index.html">Inicio</a>
+                <a class="text-xl p-4 hover:bg-slate-400 transition-all border-b border-gray-600" href="./blog.html">Blog</a>
+                <a class="text-xl p-4 hover:bg-slate-400 transition-all border-b border-gray-600" href="./contacto.html">Contacto</a>
+                <a class="text-xl p-4 hover:bg-slate-400 transition-all" href="#">Comprar</a>
+            </div>
+        </nav>
     </header>
     <main class="mt-36">
         <section class="container mx-auto">
@@ -52,8 +68,8 @@
             </div>
         </section>
         <section class="container mx-auto py-16">
-            <h3 class="text-center text-6xl mb-20">Nuestros valores institucionales</h3>
-            <div class="grid md:grid-cols-3 gap-4">
+            <h3 class="text-center text-4xl md:text-6xl mb-10 md:mb-20">Nuestros valores institucionales</h3>
+            <div class="grid md:grid-cols-3 gap-6 px-4 md:px-0">
                 <article class="flex flex-col gap-4 border border-yellow-200 rounded-md p-6">
                     <figure>
                         <svg width="128" height="128" class="mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
