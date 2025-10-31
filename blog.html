@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <script src="//cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script type="module" src="./js/publicaciones.js"></script>
+    <!-- ppQtZhQbmR4 id del video para implementar más tarde -->
+</head>
+
+<body class="bg-blue-950 text-gray-100">
+    <header class="backdrop-blur-sm flex bg-gray-700 justify-between items-center fixed top-0 w-full z-50">
+        <a href="./index.html">
+            <img src="./assets/logo.png" class="w-24" alt="Logo del Grupo IDT">
+        </a>
+        <nav class="flex gap-4 h-24 items-center">
+            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./index.html">Inicio</a>
+            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./blog.html">Blog</a>
+            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./contacto.html">Contacto</a>
+        </nav>
+        <div class="pr-3 h-24 flex">
+            <a class="text-2xl leading-[80px] h-24 p-2 hover:bg-slate-400 transition-all" href="#">Comprar</a>
+        </div>
+    </header>
+    <main class="mt-36">
+        <search class="container mx-auto">
+            <form method="get" class="w-96 mx-auto">
+                <input name="contenido_titulo" type="text" placeholder="Escribe..." class="p-3 placeholder:text-black w-full text-black">
+            </form>
+        </search>
+        <section class="container mx-auto py-16 flex flex-col gap-20">
+            <h3 class="text-center text-6xl">Revisa nuestras publicaciones</h3>
+            <section class="bg-teal-400 p-6 grid md:grid-cols-3 gap-6" id="publicaciones">
+                
+            </section>
+        </section>
+    </main>
+    <footer class="bg-gray-900 py-12 text-center flex flex-col gap-6">
+        <nav class="flex gap-4 mx-auto p-6">
+            <a href="https://www.linkedin.com/in/jos%C3%A9-fabricio-aquino-pando/" target="_blank" title="LinkedIn">
+
+                <svg width="96" height="96" viewBox="0 0 24 24" fill="currentColor">
+                    <use href="#linkedin"></use>
+                </svg>
+
+            </a>
+            <a href="https://github.com/jfaquinopando" target="_blank" title="GitHub">
+                <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <use href="#github"></use>
+                </svg>
+            </a>
+        </nav>
+        <hr>
+        <span class="text-3xl"> Fabricio &copy; <i class="fecha"></i> </span>
+    </footer>
+    <svg class="h-0">
+        <defs>
+            <symbol id="linkedin">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" />
+            </symbol>
+            <symbol id="github">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+            </symbol>
+            <symbol id="config">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M6 4v4" />
+                <path d="M6 12v8" />
+                <path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M12 4v10" />
+                <path d="M12 18v2" />
+                <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M18 4v1" />
+                <path d="M18 9v11" />
+            </symbol>
+        </defs>
+    </svg>
+</body>
+
+</html>

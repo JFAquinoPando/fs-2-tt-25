@@ -5,41 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
+    <link rel="stylesheet" href="./css/glider.css">
     <script type="module" src="./js/youtube-lite.js"></script>
+    <script src="./js/glider.js" defer></script>
+    <script src="./js/glider.config.js" defer></script>
+    <script src="//cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
     <!-- ppQtZhQbmR4 id del video para implementar más tarde -->
 </head>
 
-<body>
-    <header>
-        <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="./blog.html">Blog</a>
-            <a href="./contacto.html">Contacto</a>
+<body class="bg-blue-950 text-gray-100">
+    <header class="backdrop-blur-sm flex bg-gray-700 justify-between items-center fixed top-0 w-full z-50">
+        <a href="./index.html">
+            <img src="./assets/logo.png" class="w-24" alt="Logo del Grupo IDT">
+        </a>
+        <nav class="flex gap-4 h-24 items-center">
+            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./index.html">Inicio</a>
+            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./blog.html">Blog</a>
+            <a class="text-2xl leading-[80px] h-24 w-[8ch] text-center p-2 hover:bg-slate-400 transition-all" href="./contacto.html">Contacto</a>
         </nav>
+        <div class="pr-3 h-24 flex">
+            <a class="text-2xl leading-[80px] h-24 p-2 hover:bg-slate-400 transition-all" href="#">Comprar</a>
+        </div>
     </header>
-    <main>
+    <main class="mt-36">
+        <section class="container mx-auto">
+            <div class="glider-contain">
+                <div class="glider">
+                    <div class="">
+                        <img src="./assets/banner-1.webp" class="w-full h-[75dvh] object-cover" alt="">
+                        <span class="slide-title">Slide 1</span>
+                    </div>
+                    <div class="">
+                        <img src="./assets/banner-2.webp" class="w-full h-[75dvh] object-cover" alt="">
+                        <span class="slide-title">Slide 2</span>
+                    </div>
+                    <div class="">
+                        <img src="./assets/banner-3.webp" class="w-full h-[75dvh] object-cover" alt="">
+                        <span class="slide-title">Slide 3</span>
+                    </div>
+                </div>
+                <button class="glider-prev">&laquo;</button>
+                <button class="glider-next">&raquo;</button>
+                <div id="dots"></div>
+            </div>
+        </section>
+        <section class="container mx-auto py-16">
+            <h3 class="text-center text-6xl mb-20">Nuestros valores institucionales</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+                <article class="flex flex-col gap-4 border border-yellow-200 rounded-md p-6">
+                    <figure>
+                        <svg width="128" height="128" class="mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <use href="#config"></use>
+                    </svg>
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum commodi, suscipit
+                        voluptatem
+                        nobis vero. Amet corporis ratione hic, maxime officia nobis saepe nisi delectus dolorem quam
+                        minima
+                        unde
+                        reiciendis.</p>
+                </article>
+               <article class="flex flex-col gap-4 border border-yellow-200 rounded-md p-6">
+                    <figure>
+                        <svg width="128" height="128" class="mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <use href="#config"></use>
+                    </svg>
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum commodi, suscipit
+                        voluptatem
+                        nobis vero. Amet corporis ratione hic, maxime officia nobis saepe nisi delectus dolorem quam
+                        minima
+                        unde
+                        reiciendis.</p>
+                </article>
+               <article class="flex flex-col gap-4 border border-yellow-200 rounded-md p-6">
+                    <figure>
+                        <svg width="128" height="128" class="mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <use href="#config"></use>
+                    </svg>
+                    </figure>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum commodi, suscipit
+                        voluptatem
+                        nobis vero. Amet corporis ratione hic, maxime officia nobis saepe nisi delectus dolorem quam
+                        minima
+                        unde
+                        reiciendis.</p>
+                </article>
+                
 
+            </div>
+        </section>
+        <section class="container mx-auto py-16 flex flex-col gap-20">
+            <h3 class="text-center text-6xl">Te dejamos una muestra</h3>
+            <div class="w-full max-w-[800px] mx-auto">
+                <lite-youtube videoid="ppQtZhQbmR4"></lite-youtube>
+            </div>
+        </section>
     </main>
-    <footer>
-        <nav>
+    <footer class="bg-gray-900 py-12 text-center flex flex-col gap-6">
+        <nav class="flex gap-4 mx-auto p-6">
             <a href="https://www.linkedin.com/in/jos%C3%A9-fabricio-aquino-pando/" target="_blank" title="LinkedIn">
 
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <use href="#linkedin"></use>
+                <svg width="96" height="96" viewBox="0 0 24 24" fill="currentColor">
+                    <use href="#linkedin"></use>
                 </svg>
 
             </a>
             <a href="https://github.com/jfaquinopando" target="_blank" title="GitHub">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <use href="#github"></use>
                 </svg>
             </a>
         </nav>
         <hr>
-        <span> Fabricio &copy; <i class="fecha"></i> </span>
+        <span class="text-3xl"> Fabricio &copy; <i class="fecha"></i> </span>
     </footer>
-    <svg>
+    <svg class="h-0">
         <defs>
             <symbol id="linkedin">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -50,6 +136,18 @@
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path
                     d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+            </symbol>
+            <symbol id="config">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M6 4v4" />
+                <path d="M6 12v8" />
+                <path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M12 4v10" />
+                <path d="M12 18v2" />
+                <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M18 4v1" />
+                <path d="M18 9v11" />
             </symbol>
         </defs>
     </svg>
